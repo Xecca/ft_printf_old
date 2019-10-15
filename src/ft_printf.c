@@ -6,7 +6,7 @@
 /*   By: dreik <dreik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 18:57:45 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/15 16:34:47 by dreik            ###   ########.fr       */
+/*   Updated: 2019/10/15 16:37:52 by dreik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,17 @@ void ft_printf(char *apFormat, ...)
 		printf ("%d", ival);
 	}
 	else if (*p == 'f')
-		{
-		double  dval = 0.;
-		dval = va_arg(ap, double);
-		printf("%f", dval);
-		}
+	{
+	double  dval = 0.;
+	dval = va_arg(ap, double);
+	printf("%f", dval);
+	}
 	else if (*p == 's')
-		{
-		for(char *sval = va_arg(ap, char *); *sval; sval++)
-			putchar(*sval);
-		}
+	{
+	//rebuild for
+	for(char *sval = va_arg(ap, char *); *sval; sval++)
+		putchar(*sval);
+	}
 	else
 		putchar(*p);
 	p++;
