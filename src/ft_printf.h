@@ -6,7 +6,7 @@
 /*   By: dreik <dreik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/13 09:53:27 by dreik            ###   ########.fr       */
+/*   Updated: 2019/10/15 10:38:27 by dreik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "../libft/libft.h"
 # include <stdio.h>
-# include <stdarg.h>
+
 
 // typedef struct	va_list
 // {
