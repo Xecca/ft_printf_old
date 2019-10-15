@@ -6,7 +6,7 @@
 /*   By: dreik <dreik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 18:57:45 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/15 16:37:52 by dreik            ###   ########.fr       */
+/*   Updated: 2019/10/15 18:46:12 by dreik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ void ft_printf(char *apFormat, ...)
 	}
 	else if (*p == 's')
 	{
-	//rebuild for
+	//for for rebuild
+	
 	for(char *sval = va_arg(ap, char *); *sval; sval++)
 		putchar(*sval);
 	}
