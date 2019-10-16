@@ -6,7 +6,7 @@
 /*   By: dreik <dreik@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/26 18:57:45 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/15 18:46:12 by dreik            ###   ########.fr       */
+/*   Updated: 2019/10/16 14:50:58 by dreik            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void ft_printf(char *apFormat, ...)
 	{
 		int ival = 0;
 		ival = va_arg(ap, int);
-		printf ("%d", ival);
+		printf ("%d s", ival);
 	}
 	else if (*p == 'f')
 	{
