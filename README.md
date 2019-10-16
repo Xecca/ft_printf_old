@@ -1,5 +1,5 @@
 # ft_printf
-My version function printf() in c language.
+My version function printf() in C language.
 
 - Good title about printf(): http://www.c-cpp.ru/content/printf
 
