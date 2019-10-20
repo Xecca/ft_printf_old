@@ -56,8 +56,6 @@ void ft_printf(char *apFormat, ...)
 			// printf ("%d", ival);
 			ft_putnbr(ival);
 			flag = 0;
-			// p++;
-			// continue;
 		}
 		else if (*p == 'f' && flag == 1)
 		{
@@ -67,25 +65,14 @@ void ft_printf(char *apFormat, ...)
 			// printf("%f", dval);
 			// ft_putdouble(dval);
 			flag = 0;
-			// p++;
-			// continue;
 		}
 		else if (*p == 's' && flag == 1)
 		{
 			char *sval = va_arg(ap, char *);
-			// while (*sval)
-			// {
-			// 	ft_putchar(*sval);
-			// 	sval++;
-			// }
 			ft_putstr(sval);
-			// p++;
 		}
 		else if (*p != '\0' && *p != '%')
-		{
 			ft_putchar(*p);
-			// p++;
-		}
 		if (*p != '%')
 			p++;
 	}

@@ -11,23 +11,24 @@ SOURCES=src/*.c
 
 OBJECTS=*.o
 
-INCLUDES=libft/libft.a
+INCLUDES=libft/
 
-EXECUTABLE=ft_printf
+NAME=libftprintf.a
 
-all: $(EXECUTABLE)
+EXE=ft_printf
 
-$(EXECUTABLE):
+all: $(NAME)
+$(NAME):
 	@make -C libft/ re
 	$(CC) $(SOURCES) $(CFLAGS)
-	$(CC) $(OBJECTS) $(INCLUDES) -o $@
+	$(CC) $(OBJECTS) $(INCLUDES)$(NAME) $(INCLUDES)libft.a -o $(EXE)
 	rm -rf $(OBJECTS)
 
 clean:
-	rm -rf $(OBJECTS) $(EXECUTABLE)
+	rm -rf $(INCLUDES)$(OBJECTS)
 
 fclean: clean
-	/bin/rm -f $(EXECUTABLE)
+	/bin/rm -f $(NAME) $(INCLUDES)$(NAME) $(EXE)
 	@make -C libft/ fclean
 
 re: fclean all
