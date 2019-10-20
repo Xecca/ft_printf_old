@@ -81,12 +81,13 @@ void ft_printf(char *apFormat, ...)
 			ft_putstr(sval);
 			// p++;
 		}
-		else if (*p != '\0')
+		else if (*p != '\0' && *p != '%')
 		{
 			ft_putchar(*p);
 			// p++;
 		}
-		p++;
+		if (*p != '%')
+			p++;
 	}
 	va_end(ap); /* clean all */
 }
