@@ -34,41 +34,59 @@
 void ft_printf(char *apFormat, ...)
 {
 	va_list ap;             /* point on next unnamed argument */
-
 	va_start(ap, apFormat); /* set 'ap' on 1-st unnamed argument */
+	int		flag;
 
+	flag = 0;
 // for (char *p = apFormat; *p; p++)
 	char *p;
 
 	p = apFormat;
-	while (*p)
+	while (*p != '\0')
 	{
-	if (*p !='%')
-	{
-		putchar(*p);
-	}
-	else if (*p == 'd')
-	{
-		int ival = 0;
-		ival = va_arg(ap, int);
-		printf ("%d s", ival);
-	}
-	else if (*p == 'f')
-	{
-	double  dval = 0.;
-	dval = va_arg(ap, double);
-	printf("%f", dval);
-	}
-	else if (*p == 's')
-	{
-	//for for rebuild
-	
-	for(char *sval = va_arg(ap, char *); *sval; sval++)
-		putchar(*sval);
-	}
-	else
-		putchar(*p);
-	p++;
+		if (*p == '%')
+			flag = 1;
+		else
+			ft_putchar(*p);
+		p++;
+		if (*p == 'd' && flag == 1)
+		{
+			int ival = 0;
+			ival = va_arg(ap, int);
+			// printf ("%d", ival);
+			ft_putnbr(ival);
+			flag = 0;
+			// p++;
+			// continue;
+		}
+		else if (*p == 'f' && flag == 1)
+		{
+			double dval = 0.;
+			dval = va_arg(ap, double);
+			ft_putnbr(dval);
+			// printf("%f", dval);
+			// ft_putdouble(dval);
+			flag = 0;
+			// p++;
+			// continue;
+		}
+		else if (*p == 's' && flag == 1)
+		{
+			char *sval = va_arg(ap, char *);
+			// while (*sval)
+			// {
+			// 	ft_putchar(*sval);
+			// 	sval++;
+			// }
+			ft_putstr(sval);
+			// p++;
+		}
+		else if (*p != '\0')
+		{
+			ft_putchar(*p);
+			// p++;
+		}
+		p++;
 	}
 	va_end(ap); /* clean all */
 }
@@ -88,7 +106,6 @@ int main()
 	//print_numbers(2, i, j);
 	// minprintf(str, i);
 	example_b();
-	printf("\n");
 	printf("%d %f %s \n", 11, 12.12f, "Hello");
 
     return (0);

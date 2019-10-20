@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 19:23:30 by aponomar          #+#    #+#             */
-/*   Updated: 2019/08/28 11:19:35 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/10/19 22:37:48 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_putchar(unsigned char c);
 void				ft_putchar_fd(char c, int fd);
+char				*ft_putdouble(int dval);
 void				ft_putendl(char const *s);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
