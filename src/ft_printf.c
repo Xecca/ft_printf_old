@@ -13,7 +13,6 @@
 // change my email
 
 #include "ft_printf.h"
-#include <stdarg.h>
 
 // void print_numbers( size_t amount, ... ) {
 

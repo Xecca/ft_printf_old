@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dreik <dreik@student.42.fr>                +#+  +:+       +#+        */
+/*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/15 10:38:27 by dreik            ###   ########.fr       */
+/*   Updated: 2019/10/23 23:34:20 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft/libft.h"
 # include <stdio.h>
+# include <stdarg.h>
 
 
 // typedef struct	va_list
