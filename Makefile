@@ -21,7 +21,7 @@ all: $(NAME)
 $(NAME):
 	@make -C libft/ re
 	$(CC) $(SOURCES) $(CFLAGS)
-	$(CC) $(OBJECTS) $(INCLUDES)$(NAME) $(INCLUDES)libft.a -o $(EXE)
+	$(CC) $(OBJECTS) $(INCLUDES)$(NAME) -o $(EXE)
 	rm -rf $(OBJECTS)
 
 clean:

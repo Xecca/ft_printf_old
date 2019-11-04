@@ -95,5 +95,7 @@ int main()
 	example_b();
 	printf("%d %f %s \n", 11, 12.12f, "Hello");
 
+	printf("ostatok ot deleniya = %f", (13.64 / 10));
+
     return (0);
 }
