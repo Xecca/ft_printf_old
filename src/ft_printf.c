@@ -78,24 +78,24 @@ void ft_printf(char *apFormat, ...)
 	va_end(ap); /* clean all */
 }
 
-void example_b()
-{
-	ft_printf("%d %f %s \n", 11, 12.12f, "Hello");
-}
+// void example_b()
+// {
+// 	ft_printf("%d %f %s \n", 11, 12.12f, "Hello");
+// }
 
 
-int main()
-{
-	// char *str = "sdfsfsd";
-	//char *str2;
-	// int i = 10;
-	// int j = 5;
-	//print_numbers(2, i, j);
-	// minprintf(str, i);
-	example_b();
-	printf("%d %f %s \n", 11, 12.12f, "Hello");
+// int main()
+// {
+// 	// char *str = "sdfsfsd";
+// 	//char *str2;
+// 	// int i = 10;
+// 	// int j = 5;
+// 	//print_numbers(2, i, j);
+// 	// minprintf(str, i);
+// 	example_b();
+// 	printf("%d %f %s \n", 11, 12.12f, "Hello");
 
-	printf("ostatok ot deleniya = %f", (13.64 / 10));
+// 	printf("ostatok ot deleniya = %f", (13.64 / 10));
 
-    return (0);
-}
+//     return (0);
+// }
