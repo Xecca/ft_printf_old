@@ -34,7 +34,7 @@ clean:
 	/bin/rm -f $(OBJECTS)
 
 fclean: clean
-	/bin/rm -f $(NAME) $(INCLUDES)$(NAME) $(EXE)
+	/bin/rm -f $(NAME)
 	@make -C libft/ fclean
 
 re: fclean all
