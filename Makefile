@@ -18,16 +18,10 @@ NAME=libftprintf.a
 all: $(NAME)
 
 $(NAME):
-	# @make -C libft/ re
-	# $(CC) $(SOURCES) $(CFLAGS)
-	# $(CC) $(OBJECTS) $(INCLUDES)$(NAME) -o $(EXE)
-	# rm -rf $(OBJECTS)
 	@make -C libft/ re
 	gcc -Wall -Wextra -Werror -I$(INCLUDES) -c $(SOURCES)
 	ar -rc $(NAME) $(OBJECTS) libft/*.o
 	ranlib $(NAME)
-	# rm -rf $(INCLUDES)$(OBJECTS)
-	# rm -rf libft/$(OBJECTS)
 
 clean:
 	@make -C libft/ clean
