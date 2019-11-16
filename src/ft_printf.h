@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/10/23 23:34:20 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/15 21:47:45 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,11 @@
 # include <stdio.h>
 # include <stdarg.h>
 
-
-// typedef struct	va_list
-// {
-//     void		*ap;
-// 	char		*fmt;
-// }				va_start;
+typedef struct	s_flag
+{
+		void		*ap;
+		char		*fmt;
+}				t_flag
 
 
 #endif

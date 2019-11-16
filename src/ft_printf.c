@@ -14,41 +14,27 @@
 
 #include "ft_printf.h"
 
-// void print_numbers( size_t amount, ... ) {
-
-//     va_list ap;
-//     int number;
-//     va_start( ap, amount );
-
-//     printf( "Total numbers: %zu, let's go! ", amount );
-//     while(amount--) {
-//         number = va_arg( ap, int );
-// 		ft_putnbr(number);
-//         //printf( " [%d]", number );
-//     }
-
-//     va_end( ap );
-// }
-
-int ft_printf(char *apFormat, ...)	/* Function return quantity arguments (int), which was output. Function take undefined number of parameters. */
+int ft_printf(char *apFormat, ...)	/* Function return quantity characters (int), which was output. Function take undefined number of parameters. */
 {
-	va_list ap;             /* point on next unnamed argument */
+	va_list ap;             /* point on next unnamed argument.  */
 	va_start(ap, apFormat); /* set 'ap' on 1-st unnamed argument */
 	int		flags;
+	int		count;
 
 	flags = 0;
+	count = 0;
 // for (char *p = apFormat; *p; p++)
-	char *p;
+	// char *p;
 
-	p = apFormat;
-	while (*p)
+	// p = apFormat;
+	while (*apFormat)
 	{
-		if (*p == '%')
+		if (*apFormat == '%')
 			flags = 1;
 		else
-			ft_putchar(*p);
+			ft_putchar(*apFormat);
 		p++;
-		if (*p == 'd' && flags == 1)
+		if (*apFormat == 'd' && flags == 1)
 		{
 			int ival = 0;
 			ival = va_arg(ap, int);
@@ -56,7 +42,7 @@ int ft_printf(char *apFormat, ...)	/* Function return quantity arguments (int), 
 			ft_putnbr(ival);
 			flags = 0;
 		}
-		else if (*p == 'f' && flags == 1)
+		else if (*apFormat == 'f' && flags == 1)
 		{
 			double dval = 0.;
 			dval = va_arg(ap, double);
@@ -65,15 +51,15 @@ int ft_printf(char *apFormat, ...)	/* Function return quantity arguments (int), 
 			// ft_putdouble(dval);
 			flags = 0;
 		}
-		else if (*p == 's' && flags == 1)
+		else if (*apFormat == 's' && flags == 1)
 		{
 			char *sval = va_arg(ap, char *);
 			ft_putstr(sval);
 		}
-		else if (*p != '\0' && *p != '%')
-			ft_putchar(*p);
-		if (*p != '%')
-			p++;
+		else if (*apFormat != '\0' && *apFormat != '%')
+			ft_putchar(*apFormat);
+		if (*apFormat != '%')
+			apFormat++;
 	}
 	va_end(ap); /* clean all */
 	return (flags);
