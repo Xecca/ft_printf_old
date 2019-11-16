@@ -11,3 +11,9 @@ My version function printf() in C language.
 - printf ("Hi %с %d %s", 'с', 10, "there!");
 
 приведет к выводу «Hi с 10 there!»
+
+/////////
+
+# Used resource:
+https://linux.die.net/man/3/printf
+https://www.lix.polytechnique.fr/~liberti/public/computing/prog/c/C/FUNCTIONS/format.html

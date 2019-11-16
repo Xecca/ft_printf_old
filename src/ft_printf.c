@@ -14,19 +14,18 @@
 
 #include "ft_printf.h"
 
-int ft_printf(char *apFormat, ...)	/* Function return quantity characters (int), which was output. Function take undefined number of parameters. */
+int			ft_printf(char *apFormat, ...)	/* Function return quantity characters (int), which was output. Function take undefined number of parameters. */
 {
 	va_list ap;             /* point on next unnamed argument.  */
-	va_start(ap, apFormat); /* set 'ap' on 1-st unnamed argument */
-	// int		flags;
 	int		count;
+	t_iden	*flags;
 
-	// flags = 0;
 	count = 0;
 // for (char *p = apFormat; *p; p++)
 	// char *p;
 
 	// p = apFormat;
+	va_start(ap, apFormat); /* set 'ap' on 1-st unnamed argument */
 	while (*apFormat != '\0')
 	{
 		if (*apFormat != '%')

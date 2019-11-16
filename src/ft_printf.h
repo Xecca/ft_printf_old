@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/16 22:41:02 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 00:27:48 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@
 # include <stdio.h>
 # include <stdarg.h>
 
-typedef struct	s_flag
+typedef struct			s_iden
 {
-		void		*ap;
-		char		*fmt;
-}				t_flag;
+		unsigned char	ident;	/* format identifiers */
+		unsigned char	h_spec;	/* %h specifier (short) */
+		
+}						t_iden;
 
 #endif
