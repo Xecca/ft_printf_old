@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   formats.c                                          :+:      :+:    :+:   */
+/*   format_identifiers.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 20:53:33 by Xecca             #+#    #+#             */
-/*   Updated: 2019/10/22 21:00:26 by Xecca            ###   ########.fr       */
+/*   Created: 2019/11/16 23:47:24 by Xecca             #+#    #+#             */
+/*   Updated: 2019/11/16 23:51:18 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	int_f(int d);		// %d - Десятичное число целого типа со знаком
+//  %d %i		Decimal signed integer.
+//     %o		Octal integer.
+//     %x %X	Hex integer.
+//     %u		Unsigned integer.
+//     %c		Character.
+//     %s		String. See below.
+//     %f		double
+//     %e %E	double.
+//     %g %G	double.
+//     %p		pointer.
+//     %n		Number of characters written by this printf.
+//              No argument expected.
+//     %%		%. No argument expected.
 
-void	char_f(char c);		// %с - Символ типа char
-
-void	str_f(char *str);	// %s - Строка символов
-
-void	double_f(double d);	// %f - (float) Десятичное число с плавающей точкой
-
-void	perc_f();			// %% - Выводит символ %

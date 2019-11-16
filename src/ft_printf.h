@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/15 21:47:45 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/16 22:41:02 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ typedef struct	s_flag
 {
 		void		*ap;
 		char		*fmt;
-}				t_flag
-
+}				t_flag;
 
 #endif

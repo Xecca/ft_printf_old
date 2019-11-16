@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/11/16 22:19:59 by Xecca             #+#    #+#              #
+#    Updated: 2019/11/16 22:42:02 by Xecca            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # Compiler in this project
 # CC=gcc
 # Flags in this project
@@ -7,15 +19,18 @@
 # $@ - флаг, который подставляет значение первой переменной.
 # $< - ?
 # -c - флаг создаёт объектные файлы с расширением *.o
+
+NAME=libftprintf.a
+
 SOURCES=src/*.c
 
 OBJECTS=*.o
 
 INCLUDES=src/
 
-NAME=libftprintf.a
-# EXE=ft_printf
-all: $(NAME)
+# EXECUTABLE=ft_printf
+
+all:$(NAME)
 
 $(NAME):
 	@make -C libft/ re
@@ -28,7 +43,8 @@ clean:
 	/bin/rm -f $(OBJECTS)
 
 fclean: clean
-	/bin/rm -f $(NAME)
 	@make -C libft/ fclean
+	/bin/rm -f $(NAME)
 
 re: fclean all
+

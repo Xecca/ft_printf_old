@@ -6,12 +6,12 @@
 #    By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/29 16:29:37 by aponomar          #+#    #+#              #
-#    Updated: 2019/10/20 14:15:11 by Xecca            ###   ########.fr        #
+#    Updated: 2019/11/16 22:33:32 by Xecca            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Name of the library.
-NAME=libftprintf.a
+NAME=libft.a
 
 # Source functions.
 SRCS 		:= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
