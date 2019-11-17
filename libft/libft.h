@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 19:23:30 by aponomar          #+#    #+#             */
-/*   Updated: 2019/10/19 22:37:48 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 23:34:02 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
 char				*ft_itoa(int n);
+char				*ft_itoa_base(unsigned int n, int base);
+char				*ft_itoa_base_unsigned(size_t n, int base);
+char				*ft_itoa_long(long n);
+char				*ft_itoa_unsigned(size_t n);
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, \
@@ -76,6 +80,7 @@ void				ft_putstr(char *str);
 void				ft_putstr_fd(char const *s, int fd);
 char				**ft_sfill(char const *s, char **str, \
 					int wdcount, char c);
+char				*ft_straddchar(char *str, char ch);
 char				*ft_strcat(char *restrict s1, const char *restrict s2);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
@@ -87,6 +92,7 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char*));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_free(char *s1, char *s2, int det);
 size_t				ft_strlcat(char *restrict dst, \
 					const char *restrict src, size_t dstsize);
 void				*ft_strldup(void const *s, size_t l);

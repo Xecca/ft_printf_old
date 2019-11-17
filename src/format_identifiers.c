@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 23:47:24 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 21:24:14 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 23:35:38 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,19 @@
 //     %%		%. No argument expected.
 
 // %d and %i
+
+static char	*ident_u_U(register t_spec flags, va_list *ap)
+{
+	char	*s;
+	
+	s = NULL;
+	if (flags.spec == 'u' || flags.j_mod || flags.l_mod || flags.z_mod)
+		s = ft_itoa_unsigned(va_arg(*ap, unsigned int));
+	else if (flags.spec == 'U' || flags.j_mod || flags.l_mod || flags.z_mod)
+		s = ft_itoa_unsigned(va_arg(*ap, unsigned long));
+	s = int_constr(s, flags, 'u');
+	return (s);
+}
 
 static char	*ident_d_i(register t_spec flags, va_list *ap)
 {
@@ -57,4 +70,9 @@ char		*form_ident(t_spec *flags, va_list *ap)
 	s = NULL;
 	if (flags->spec == 'd' || flags->spec == 'i')
 		s = ident_d_i(*flags, ap);
+	else if (flags->spec == 'o')
+		s = int_constr(ft_itoa_base(va_arg(*ap, int), 8), *flags, 'o');
+	else
+		s = str_constr(ft_strdup(""), *flags);
+	return (s);
 }

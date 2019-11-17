@@ -6,11 +6,28 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 20:32:04 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 21:11:50 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 23:45:02 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static char *number_constr(char *arg, register t_spec flags, int len)
+{
+	char	*dash;
+	char	*str;
+
+	dash = ft_strchr(arg, '-');
+	if (len < flags.number)
+	{
+		if (flags.spec == 'd' && flags.filler == '0' && flags.space && !dash)
+			str[0] = ' ';
+		
+	}
+	else if ((flags.spec == 'd' || flags.spec == 'f') || flags.space && !dash)
+		arg = ft_strjoin_free(" ", arg, 2);
+	return (arg);
+}
 
 static char	*asterisk_constr(char *arg, char *dash, t_spec flags)
 {
@@ -56,3 +73,5 @@ char		*int_constr(char *arg, t_spec flags, register char spec)
 	arg = number_constr(arg, flags, ft_strlen(arg));
 	return (arg);
 }
+
+
