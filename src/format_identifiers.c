@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 23:47:24 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 20:31:38 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 21:24:14 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*ident_d_i(register t_spec flags, va_list *ap)
 			s = ft_itoa_long(va_arg(*ap, long));
 		else
 			s = ft_itoa(va_arg(*ap, int));
-		s = 
+		s = int_constr(s, flags, 'd');
 	}
 	return (s);
 }
