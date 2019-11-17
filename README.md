@@ -3,18 +3,16 @@ My version function printf() in C language.
 
 ----------------------------------
 Check status by 42filechacker:
-dif```
-+ 1 -> author file						aponomar$
-# 2 -> norminette						Command not found
-- 3 -> makefile							4 error(s)
-- 4 -> forbidden functions				Cannot compile
-- 5 -> basic tests						Cannot compile
-- 6 -> undefined behavior tests			Cannot compile
-- 7 -> leaks							Cannot compile
-- 8 -> speed test						Cannot compile
-- 9 -> moulitest						Cannot compile
-- A -> PFT								PFT has aborted
-```
+<p style='color:green'>1 -> author file						aponomar$</p>
+<p style='color:grey'>2 -> norminette						Command not found</p>
+<p style='color:red'>3 -> makefile							4 error(s)</p>
+<p style='color:red'>4 -> forbidden functions				Cannot compile</p>
+<p style='color:red'>5 -> basic tests						Cannot compile</p>
+<p style='color:red'>6 -> undefined behavior tests			Cannot compile</p>
+<p style='color:red'>7 -> leaks							Cannot compile</p>
+<p style='color:red'>8 -> speed test						Cannot compile</p>
+<p style='color:red'>9 -> moulitest						Cannot compile</p>
+<p style='color:red'>A -> PFT								PFT has aborted</p>
 ----------------------------------
 
 - Good title about printf(): http://www.c-cpp.ru/content/printf
