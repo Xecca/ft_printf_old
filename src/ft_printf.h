@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/17 21:13:06 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 21:26:36 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,8 @@ typedef struct		s_spec
 	//	width end
 	
 }					t_spec;
+
+char				*int_constr(char *arg, t_spec flags, register char spec);
+static char			*asterisk_constr(char *arg, char *dash, t_spec flags);
 
 #endif

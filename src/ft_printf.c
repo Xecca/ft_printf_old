@@ -32,8 +32,10 @@ int			ft_printf(char *apFormat, ...)	/* Function return quantity characters (int
 		{
 			ft_putchar(*apFormat);
 			count++;
+			continue;
 		}	
 		apFormat++;
+		flags = (*apFormat) ? flag_check(++apFormat) : flag_check(apFormat);
 		if (*apFormat == 'd')
 		{
 			int ival = 0;
