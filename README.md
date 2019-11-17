@@ -1,6 +1,22 @@
 # ft_printf
 My version function printf() in C language.
 
+----------------------------------
+Check status by 42filechacker:
+dif```
++ 1 -> author file						aponomar$
+# 2 -> norminette						Command not found
+- 3 -> makefile							4 error(s)
+- 4 -> forbidden functions				Cannot compile
+- 5 -> basic tests						Cannot compile
+- 6 -> undefined behavior tests			Cannot compile
+- 7 -> leaks							Cannot compile
+- 8 -> speed test						Cannot compile
+- 9 -> moulitest						Cannot compile
+- A -> PFT								PFT has aborted
+```
+----------------------------------
+
 - Good title about printf(): http://www.c-cpp.ru/content/printf
 
 
