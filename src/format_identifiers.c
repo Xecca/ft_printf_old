@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 23:47:24 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 00:31:05 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 20:31:38 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,31 @@
 
 // %d and %i
 
-static char	*ident_d_i(register t_iden flags, va_list *ap)
+static char	*ident_d_i(register t_spec flags, va_list *ap)
 {
 	char	*s;
 
 	s = NULL;
-	if (flags.ident == 'd' || flags.ident == 'i')
+	if (flags.spec == 'd' || flags.spec == 'i')
 	{
-		if (flags.h_spec == 1)
-			ft_itoa((short)va_arg(*ap, int));
-		else if (flags.h_spec == 2)
-			s = ft_itoa((signed int)va_arg(*ap, int));
-		
-			
+		if (flags.h_mod == 1)
+			s = ft_itoa((short)va_arg(*ap, int));
+		else if (flags.h_mod == 2)
+			s = ft_itoa((signed char)va_arg(*ap, int));
+		else if (flags.l_mod || flags.j_mod || flags.z_mod)
+			s = ft_itoa_long(va_arg(*ap, long));
+		else
+			s = ft_itoa(va_arg(*ap, int));
+		s = 
 	}
-		
-	{}
 	return (s);
 }
 
-char		*form_ident(t_iden *flags, va_list *ap)
+char		*form_ident(t_spec *flags, va_list *ap)
 {
 	char	*s;
 
 	s = NULL;
-	if (flags->ident == 'd' || flags->ident == 'i')
+	if (flags->spec == 'd' || flags->spec == 'i')
 		s = ident_d_i(*flags, ap);
 }

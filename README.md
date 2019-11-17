@@ -15,5 +15,8 @@ My version function printf() in C language.
 /////////
 
 # Used resource:
+http://www.cplusplus.com/reference/cstdio/printf/
+
 https://linux.die.net/man/3/printf
+
 https://www.lix.polytechnique.fr/~liberti/public/computing/prog/c/C/FUNCTIONS/format.html

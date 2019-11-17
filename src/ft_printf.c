@@ -18,7 +18,7 @@ int			ft_printf(char *apFormat, ...)	/* Function return quantity characters (int
 {
 	va_list ap;             /* point on next unnamed argument.  */
 	int		count;
-	t_iden	*flags;
+	t_spec	*flags;
 
 	count = 0;
 // for (char *p = apFormat; *p; p++)
