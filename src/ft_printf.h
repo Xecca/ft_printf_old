@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/17 20:45:45 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/17 21:13:06 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct		s_spec
 	unsigned char	hash;		// Used with o, x or X specifiers the value is preceeded with 0, 0x or 0X respectively for values different than zero.
 	unsigned char	null;		// Left-pads the number with zeroes (0) instead of spaces when padding is specified (see width sub-specifier).
 	//	flags end
-	unsigned char	filler; 	// ??? - for what?
+	unsigned char	filler; 	
 	//	width start
 	unsigned char	number;		// Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger.
 	unsigned char	asterisk;	// The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.
