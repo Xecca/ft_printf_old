@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 19:23:30 by aponomar          #+#    #+#             */
-/*   Updated: 2019/11/18 15:29:41 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 19:37:13 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef struct		s_rest
 int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 int					ft_chcount(char const *s, char c);
+char				*ft_ftoa(double nbr, unsigned int precision);
+char				*ft_ftoa_long(long double nbr, unsigned int precision);
 int					ft_intlen(int n);
 char				*ft_intrevstr(int n, int count, int sign);
 int					ft_isalnum(int c);
@@ -76,7 +78,7 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr(char *str);
+int					ft_putstr(char *str);
 void				ft_putstr_fd(char const *s, int fd);
 char				**ft_sfill(char const *s, char **str, \
 					int wdcount, char c);
@@ -117,6 +119,7 @@ char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, \
 					unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
+void				ft_strupper(char *str);
 void				ft_swap(char *ch1, char *ch2);
 int					ft_tolower(int c);
 int					ft_toupper(int c);

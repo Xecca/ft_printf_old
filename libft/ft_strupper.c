@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/14 16:00:45 by aponomar          #+#    #+#             */
-/*   Updated: 2019/11/18 19:35:51 by Xecca            ###   ########.fr       */
+/*   Created: 2019/11/18 18:53:24 by Xecca             #+#    #+#             */
+/*   Updated: 2019/11/18 18:53:31 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putstr(char *str)
+void	ft_strupper(char *str)
 {
-	size_t i;
-
-	i = 0;
-	if (str != NULL)
-		while (str[i] != '\0')
-		{
-			write(1, &str[i], 1);
-			i++;
-		}
-	return (i);
+	while (*str)
+	{
+		*str = ft_toupper(*str);
+		str++;
+	}
 }
