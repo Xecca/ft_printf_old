@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 19:23:30 by aponomar          #+#    #+#             */
-/*   Updated: 2019/11/17 23:34:02 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 15:29:41 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strsub(char const *s, \
 					unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
+void				ft_swap(char *ch1, char *ch2);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 size_t				ft_trimlen(const char *s);

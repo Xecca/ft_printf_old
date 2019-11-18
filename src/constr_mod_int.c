@@ -1,30 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   constructor_mod.c                                  :+:      :+:    :+:   */
+/*   constr_mod_int.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 20:32:04 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 23:45:02 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 16:21:51 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static char	*hash_constr(register int spec, char *arg, short aster)
+{
+	if (!ft_strcmp(arg, "0") && spec != 'p')
+		return (arg);
+	if (!ft_strcmp(arg, "0") && spec == 'p' && !aster)
+		arg[0] = '\0';
+	if (spec == 'x' || spec == 'p')
+		return (ft_strjoin_free("0x", arg, 2));
+	else if (spec == 'o')
+		return (ft_strjoin_free("0", arg, 2));
+	return (arg);
+}
 
 static char *number_constr(char *arg, register t_spec flags, int len)
 {
 	char	*dash;
 	char	*str;
 
+	// str = NULL;
 	dash = ft_strchr(arg, '-');
 	if (len < flags.number)
 	{
+		str = ft_strnew(flags.number - len);
+		ft_memset(str, flags.filler, flags.number - len);
 		if (flags.spec == 'd' && flags.filler == '0' && flags.space && !dash)
 			str[0] = ' ';
-		
+		arg = (flags.minus || flags.spec == 'p') ? ft_strjoin_free(arg, str, 3) : ft_strjoin_free(str, arg, 3);
+		dash = ft_strchr(arg, '-');
+		if (dash && flags.filler == '0')
+			ft_swap(arg, dash);
+		if (flags.hash &&flags.filler == '0' && (str = ft_strchr(arg, 'x')))
+			ft_swap(str, arg + 1);
+		if (!dash && flags.plus && flags.filler == '0' && (flags.spec == 'd' || flags.spec == 'f'))
+			ft_swap(ft_strchr(arg, '0'), ft_strchr(arg, '+'));
 	}
-	else if ((flags.spec == 'd' || flags.spec == 'f') || flags.space && !dash)
+	else if ((flags.spec == 'd' || flags.spec == 'f') && flags.space && !dash)
 		arg = ft_strjoin_free(" ", arg, 2);
 	return (arg);
 }
@@ -32,7 +55,7 @@ static char *number_constr(char *arg, register t_spec flags, int len)
 static char	*asterisk_constr(char *arg, char *dash, t_spec flags)
 {
 	char	*prec;	// .number (precision)
-	int		aster;	// .* (precision)
+	int		aster;	// .* width (precision)
 	char	*str;
 
 	prec = ft_strchr(arg, '.');

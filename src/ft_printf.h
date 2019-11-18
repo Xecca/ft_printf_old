@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/17 22:33:13 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 16:18:53 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ t_spec          	check_flags(const char *s);
 char				*form_ident(t_spec *flags, va_list *ap);
 static char			*ident_d_i(register t_spec flags, va_list *ap);
 char				*int_constr(char *arg, t_spec flags, register char spec);
+char				*str_constr(char *arg, register t_spec flags);
 
 #endif

@@ -3,7 +3,7 @@ My version function printf() in C language.
 
 ----------------------------------
 Check status by 42filechacker:
-<p style='color:green'>1 -> author file						aponomar$</p>
+<p style='color:green;'>1 -> author file						aponomar$</p>
 <p style='color:grey'>2 -> norminette						Command not found</p>
 <p style='color:red'>3 -> makefile							4 error(s)</p>
 <p style='color:red'>4 -> forbidden functions				Cannot compile</p>

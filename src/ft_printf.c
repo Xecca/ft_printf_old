@@ -18,7 +18,7 @@ int			ft_printf(char *apFormat, ...)	/* Function return quantity characters (int
 {
 	va_list ap;             /* point on next unnamed argument.  */
 	int		count;
-	t_spec	*flags;
+	t_spec	flags;
 
 	count = 0;
 // for (char *p = apFormat; *p; p++)
@@ -35,7 +35,7 @@ int			ft_printf(char *apFormat, ...)	/* Function return quantity characters (int
 			continue;
 		}	
 		apFormat++;
-		flags = (*apFormat) ? flag_check(++apFormat) : flag_check(apFormat);
+		flags = (*apFormat) ? check_flags(++apFormat) : check_flags(apFormat);
 		if (*apFormat == 'd')
 		{
 			int ival = 0;

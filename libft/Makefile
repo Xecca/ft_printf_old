@@ -6,7 +6,7 @@
 #    By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/29 16:29:37 by aponomar          #+#    #+#              #
-#    Updated: 2019/11/17 11:29:55 by Xecca            ###   ########.fr        #
+#    Updated: 2019/11/18 15:20:01 by Xecca            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME=libft.a
 SRCS 		:= *.c
 
 # Source object files.
-OBJECTS		:= o.o
+OBJECTS		:= *.o
 
 # Files directory.
 INCLUDES 	:= ./
