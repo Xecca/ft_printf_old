@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 14:02:09 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/19 14:07:22 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/19 19:47:26 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,33 +72,6 @@ static void		flag_analazer_second(t_spec *flags, const char *s)
 		flags->stage++;
 	}
 }
-
-t_spec			flag_analazer(const char *s)
-{
-	t_spec flags;
-
-	ft_bzero(&flags, sizeof(t_spec));
-	if (*s == '\0')
-		return (flags);
-	flag_analazer_first(&flags, s);
-	if (s[flags.stage] >= '1' && s[flags.stage] <= '9')
-	{
-		flags.number = ft_atoi(&s[flags.stage]);
-		while (s[flags.stage] >= '0' && s[flags.stage] <= '9')
-			flags.stage++;
-	}
-	if (s[flags.stage] == '.')
-	{
-		flags.stage += (s[flags.stage] == '.') ? 1 : 0;
-		flags.asterisk = ft_atoi(&s[flags.stage]);
-		while (s[flags.stage] >= '0' && s[flags.stage] <= '9')
-			flags.stage++;
-	}
-	flag_analazer_second(&flags, s);
-	flags.spec = s[flags.stage++];
-	return (flags);
-}
-
 
 t_spec          check_allflags(const char *s)
 {

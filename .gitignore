@@ -3,3 +3,5 @@ ft_printf
 libftprintf.a
 test
 test.c
+.vscode
+*.out

@@ -3,7 +3,8 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [       
+        
         {
             "name": "gcc build and debug active file",
             "type": "cppdbg",
@@ -11,10 +12,15 @@
             "program": "/Users/dreik/programming/42/ft_printf/a.out",
             "args": [],
             "stopAtEntry": true,
-            "cwd": "/Users/dreik/programming/42/ft_printf",
+            "cwd": "/Users/dreik/programming/42/ft_printf/",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-        }
-    ]
+            "logging": {
+				"trace": true,
+				"traceResponse": true,
+				"engineLogging": true
+        				}
+		}
+					]
 }

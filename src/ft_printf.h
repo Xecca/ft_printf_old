@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/18 20:01:21 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/19 14:55:02 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char				*form_ident(t_spec *flags, va_list *ap);
 char				*int_constr(char *arg, t_spec flags, register char spec);
 char				*str_constr(char *arg, register t_spec flags);
 int					putstr_for_null_char(char *s);
+int					ft_printf(const char *apFormat, ...);  // for main.c tests
 
 #endif
