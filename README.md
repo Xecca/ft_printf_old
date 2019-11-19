@@ -3,7 +3,7 @@ My version function printf() in C language.
 
 ----------------------------------
 Check status by 42filechacker:
-1. -> author file            aponomar$								OK
+<p>1. -> author file            aponomar$								OK</p>
 2. -> norminette             Command not found						NO
 3. -> makefile               All tests passed                    	OK
 4. -> forbidden functions    No forbidden function found				OK
