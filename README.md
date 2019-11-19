@@ -3,17 +3,17 @@ My version function printf() in C language.
 
 ----------------------------------
 Check status by 42filechacker:
-1 -> author file            aponomar$								OK
-2 -> norminette             Command not found						NO
-3 -> makefile               All tests passed                    	OK
-4 -> forbidden functions    No forbidden function found				OK
-5 -> basic tests			50 failed test(s) out of 182 tests		NO
-6 -> undefined behavior 	34 failed test(s) out of 55 tests		NO
+1. -> author file            aponomar$								OK
+2. -> norminette             Command not found						NO
+3. -> makefile               All tests passed                    	OK
+4. -> forbidden functions    No forbidden function found				OK
+5. -> basic tests			50 failed test(s) out of 182 tests		NO
+6. -> undefined behavior 	34 failed test(s) out of 55 tests		NO
 tests
-7 -> leaks					0 leaks for 0 total leaked bytes		OK
-8 -> speed test				Estimated speed rate: 7%				NO
-9 -> moulitest				20 failed test(s)						NO
-A -> PFT					1340/1765 tests passed					NO
+7. -> leaks					0 leaks for 0 total leaked bytes		OK
+8. -> speed test				Estimated speed rate: 7%				NO
+9. -> moulitest				20 failed test(s)						NO
+0. A -> PFT					1340/1765 tests passed					NO
 
 ----------------------------------
 
