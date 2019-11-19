@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:48:35 by aponomar          #+#    #+#             */
-/*   Updated: 2019/08/27 20:29:36 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/11/18 20:25:51 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	sum_len = ft_strlen(s1) + ft_strlen(s2);
-	str = (char*)malloc((sum_len) + 1);
-	if (str == NULL)
+	if ((str = (char*)malloc((sum_len) + 1)) == NULL)
 		return (NULL);
 	str_sum = str;
 	while (*s1 != '\0')
@@ -31,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str++;
 		s1++;
 	}
-	while (*s2 != '\0')
+	while (*s2)
 	{
 		*str = *s2;
 		str++;

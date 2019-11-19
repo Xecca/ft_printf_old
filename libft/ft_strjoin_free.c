@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 10:38:08 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 10:54:31 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 20:16:56 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char    *ft_strjoin_free(char *s1, char *s2, int det)
     if (s1 == NULL || s2 == NULL)
         return (NULL);
     length = ft_strlen(s1) + ft_strlen(s2);
-    if ((str = ft_strnew(length)) == NULL)
+    if (!(str = ft_strnew(length)))
         return (NULL);
     ft_strcat(str, s1);
     ft_strcat(str, s2);

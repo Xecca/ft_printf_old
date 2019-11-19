@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/17 11:12:02 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/17 11:29:13 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 20:11:35 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char        *ft_straddchar(char *str, char ch)
     if (str)
     {
         length = ft_strlen(str);
-		if ((new = (char*)ft_strnew(length + 1)) == NULL)
+		if (!(new = (char*)ft_strnew(length + 1)))
 			return (NULL);
         ft_strcat(new, str);
         ft_strdel(&str);

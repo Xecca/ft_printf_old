@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 19:23:30 by aponomar          #+#    #+#             */
-/*   Updated: 2019/11/18 19:37:13 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 20:35:23 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char				*ft_straddchar(char *str, char ch);
 char				*ft_strcat(char *restrict s1, const char *restrict s2);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
-int					ft_strcmp(char *s1, char *s2);
+int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *s1, const char *s2);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);

@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   related_functions.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:35:59 by aponomar          #+#    #+#             */
-/*   Updated: 2019/11/18 20:10:40 by Xecca            ###   ########.fr       */
+/*   Created: 2019/11/18 16:52:32 by Xecca             #+#    #+#             */
+/*   Updated: 2019/11/18 16:52:44 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void		*ft_memset(void *b, int c, size_t len)
+int		putstr_for_null_char(char *s)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (i < len)
-	{
-		((unsigned char*)b)[i] = (unsigned char)c;
-		i++;
-	}
-	return (b);
+	if (s != NULL)
+		while (s[i] != '\0')
+		{
+			if (s[i] == '@')
+				ft_putchar('^');
+			ft_putchar(s[i++]);
+		}
+	return (i);
 }

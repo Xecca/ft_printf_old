@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 18:57:59 by dreik             #+#    #+#             */
-/*   Updated: 2019/11/18 16:18:53 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/18 20:01:21 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../libft/libft.h"
 # include <stdio.h>
 # include <stdarg.h>
+# include <wchar.h>
 
 typedef struct		s_spec
 {
@@ -36,18 +37,17 @@ typedef struct		s_spec
 	unsigned char	null;		// Left-pads the number with zeroes (0) instead of spaces when padding is specified (see width sub-specifier).
 	//	flags end
 	unsigned char	filler; 	
+	unsigned short	stage;		// stage specifier in input argument
 	//	width start
-	unsigned char	number;		// Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger.
-	unsigned char	asterisk;	// The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.
-	//	width end
-	
+	unsigned short	number;		// Minimum number of characters to be printed. If the value to be printed is shorter than this number, the result is padded with blank spaces. The value is not truncated even if the result is larger.
+	short			asterisk;	// The width is not specified in the format string, but as an additional integer value argument preceding the argument that has to be formatted.
+	//	width end	
 }					t_spec;
 
-static char			*asterisk_constr(char *arg, char *dash, t_spec flags);
-t_spec          	check_flags(const char *s);
+t_spec          	check_allflags(const char *s);
 char				*form_ident(t_spec *flags, va_list *ap);
-static char			*ident_d_i(register t_spec flags, va_list *ap);
 char				*int_constr(char *arg, t_spec flags, register char spec);
 char				*str_constr(char *arg, register t_spec flags);
+int					putstr_for_null_char(char *s);
 
 #endif

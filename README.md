@@ -3,16 +3,18 @@ My version function printf() in C language.
 
 ----------------------------------
 Check status by 42filechacker:
-<p style='color:green;'>1 -> author file						aponomar$</p>
-<p style='color:grey'>2 -> norminette						Command not found</p>
-<p style='color:red'>3 -> makefile							4 error(s)</p>
-<p style='color:red'>4 -> forbidden functions				Cannot compile</p>
-<p style='color:red'>5 -> basic tests						Cannot compile</p>
-<p style='color:red'>6 -> undefined behavior tests			Cannot compile</p>
-<p style='color:red'>7 -> leaks							Cannot compile</p>
-<p style='color:red'>8 -> speed test						Cannot compile</p>
-<p style='color:red'>9 -> moulitest						Cannot compile</p>
-<p style='color:red'>A -> PFT								PFT has aborted</p>
+1 -> author file            aponomar$								OK
+2 -> norminette             Command not found						NO
+3 -> makefile               All tests passed                    	OK
+4 -> forbidden functions    No forbidden function found				OK
+5 -> basic tests			50 failed test(s) out of 182 tests		NO
+6 -> undefined behavior 	34 failed test(s) out of 55 tests		NO
+tests
+7 -> leaks					0 leaks for 0 total leaked bytes		OK
+8 -> speed test				Estimated speed rate: 7%				NO
+9 -> moulitest				20 failed test(s)						NO
+A -> PFT					1340/1765 tests passed					NO
+
 ----------------------------------
 
 - Good title about printf(): http://www.c-cpp.ru/content/printf

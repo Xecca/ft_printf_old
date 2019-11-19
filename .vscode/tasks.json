@@ -8,7 +8,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${/Users/dreik/programming/42/ft_printf}/${a.out}"
             ],
             "options": {
                 "cwd": "/usr/bin"
