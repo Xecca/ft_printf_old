@@ -6,7 +6,7 @@
 /*   By: Xecca <ensimgen@gmail.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 14:02:09 by Xecca             #+#    #+#             */
-/*   Updated: 2019/11/19 19:47:26 by Xecca            ###   ########.fr       */
+/*   Updated: 2019/11/19 19:56:40 by Xecca            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int		is_flag(register char ch)
 	return (0);
 }
 
-static void		flag_analazer_first(t_spec *flags, const char *s)
+static void		check_flags_main(t_spec *flags, const char *s)
 {
 	flags->asterisk = -1;
 	while (is_flag(s[flags->stage]))
@@ -44,7 +44,7 @@ static void		flag_analazer_first(t_spec *flags, const char *s)
 	flags->filler = (flags->null) ? '0' : ' ';
 }
 
-static void		flag_analazer_second(t_spec *flags, const char *s)
+static void		check_flags(t_spec *flags, const char *s)
 {
 	while (s[flags->stage] == 'l')
 	{
@@ -80,7 +80,7 @@ t_spec          check_allflags(const char *s)
 	ft_bzero(&flags, sizeof(t_spec));
 	if (*s == '\0')
 		return (flags);
-	flag_analazer_first(&flags, s);
+	check_flags_main(&flags, s);
 	if (s[flags.stage] >= '1' && s[flags.stage] <= '9')
 	{
 		flags.asterisk = ft_atoi(&s[flags.stage]);
@@ -94,7 +94,7 @@ t_spec          check_allflags(const char *s)
 		while (s[flags.stage] >= '0' && s[flags.stage] <= '9')
 			flags.stage++;
 	}
-	flag_analazer_second(&flags, s);
+	check_flags(&flags, s);
 	flags.spec = s[flags.stage++];
 	return (flags);
 }
